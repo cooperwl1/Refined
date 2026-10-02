@@ -1,0 +1,32 @@
+{
+  "name": "refined",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Refined — Cultivating a lifestyle that allows for deeper meaning.",
+  "author": "Cooper Lappenbusch",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "npm run validate && vite build",
+    "preview": "vite preview",
+    "prepare": "svelte-kit sync || echo ''",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "validate": "node scripts/validate-content.js",
+    "new": "node scripts/new-post.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-vercel": "^6.3.4",
+    "@sveltejs/kit": "^2.70.3",
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^22.20.5",
+    "svelte": "^5.57.1",
+    "svelte-check": "^4.7.6",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.2"
+  }
+}
