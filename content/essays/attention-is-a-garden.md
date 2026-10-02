@@ -18,7 +18,7 @@ A useful question at the end of a day: *what did I water today?*
 
 ## Tending is a daily act
 
-A garden is never finished. Neither is a life arranged around what matters. There are seasons of planting and seasons of pruning, and most days are simply maintenance — a little weeding, a little water, a glance at what's coming up.
+TENDING IS A DAILY ACTTTT, THIS RIGHT HERE IS AN INTERESTING EXAMPLE OF HOW YEAHHHH I KINDA JUST WANT TO CHILL VOO AND CHILLLLL MY GUYYYY
 
 - **Plant deliberately.** Choose two or three things worth growing this season.
 - **Prune without guilt.** Ending a commitment is a form of care for the others.
