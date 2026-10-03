@@ -9,19 +9,27 @@ Around 4 years ago I started my YouTube channel Cooper Codes. Starting a YouTube
 
 In the moment I thought I was doing the right thing, I was learning, I was "figuring it out", when in the end I was more lost and broke than I had ever been in my life.
 
-This is a personal failing in some parts, but I do think that the allure of self improvement culture results in a majority swarm of people who stay stuck in careers they hate, businesses they hate, a financial situation they hate, all because they need to "lock in" and "embrace the grind". When I was a YouTuber, I felt that I couldn't have a normal job and that I needed to become this entrepreneurial idea of myself that honestly did not exist yet.
+This is a personal failing in some parts, but I do think that the allure of self improvement culture results in a majority swarm of people who stay stuck in careers they hate, businesses they hate, a financial situation they hate, all because they need to "lock in" and "embrace the grind". When I was a YouTuber, I felt that I couldn't have a normal job and that I needed to become this entrepreneurial idea of myself that did not exist yet.
 
 :::callout Who did you watch?
-Hamza, a handful of NoFap creators who I don't even remember the names of, Chris Williamson, Dr. K, Joe Rogan, Jordan Peterson, and similar names. Although this is less about certain individuals, and more about online self improvement culture as a whole.
+Hamza, a handful of NoFap creators who I don't even remember the names of, Chris Williamson, Dr. K, Joe Rogan, Jordan Peterson, and similar names. Although this post is less about certain individuals, and more about online self improvement culture as a whole.
 :::
 
 ## Some Things You Can't "Improve" Out Of
 
-Let's use the example of a business. Let's say that you hate this business, you hate working on it, you hate the people, and it stresses you out. If you "improve" the business by working on it, you effectively are pouring time into something you hate. You create more of what you hate.
+Let's use the example of a business. You hate this business, you hate working on it, you hate the people, and it stresses you out. If you "improve" the business by working on it, you effectively are pouring time into something you hate. You create more of what you hate, it's an improvement... an improvemnet of hate.
 
-Sometimes in our lives we don't require improvement, we require change. Not improvement, not self destruction (contrary to fight club), but instead change.
+It is common to find situations in our lives that don't require improvement, they instead require change. Difficult change, change that takes a step back, change that seems like you're losing, change that forces you to view your debts, the type of change that hurts you.
 
 The unfortuante truth is that for many people the change isn't what they want to hear, they need to start working at McDonalds, living in a shitty apartment, and get rid of their leased Honda Civic. Stop eating out, stop hanging with the hot girlfriend, yada yada.
+
+The danger of self improvement culture is that it sells young men on the idea of a change that looks cool, that gets them the hot chick trophy with the italian two door vehicle. This change isn't realistic; the hot chick has Borderline Personality Disorder and the italian car has been in at the mechanic for two weeks.
+
+If you get anything out of this, know that changing for the better sometimes looks like losing yourself, or giving up some of your time, or focusing on a new passion for a little extra time per week. Don't obsess over it, and definitely don't watch bullshit content on improving yourself that ignores the roots of your problems. Understand that you need to change generally comes from awareness, by observing the constant patterns of poverty within yourself. You need to view the patterns, sometimes for years at a time. It's OK, when you're young you have time to learn. Italian cars are beautiful, even they are in the shop sometimes. Don't judge yourself so harshly because you made a wrong decision, because that same judgement is going to force you to keep on making that wrong decision until it completely breaks you.
+
+Take a step back, right now. Look at the things in your life, and look at what needs to change. Write it down, and don't obssess over fixing it instantly. Just become aware of it, chill out, and don't let stupid podcasts get in the way of your understanding.
+
+Don't improve it, change it.
 
 ## Money Matters (What Self Improvers Ignore)
 
