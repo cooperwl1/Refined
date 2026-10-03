@@ -7,10 +7,12 @@
   "author": "Cooper Lappenbusch",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "npm run validate && vite build",
     "preview": "vite preview",
     "prepare": "svelte-kit sync || echo ''",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "validate": "node scripts/validate-content.js",
+    "new": "node scripts/new-post.js"
   },
   "engines": {
     "node": ">=20"
