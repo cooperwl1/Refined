@@ -43,5 +43,9 @@ Going to zero in your bank account sucks, let's call it zeroing out. Zeroing out
 
 ## Realistic Expectations, Presence, and Moving Forward
 
+Setting goals is cliche, but it's likely the only tool you need to create a personal practice. It's not so you become rich overnight like the "manifestors" tell you, but more so that you have a baseline upon which you can judge yourself.
 
 
+## Less Analysis, More Awareness
+
+A final note on how online content plagues our awareness.
