@@ -8,7 +8,7 @@ export const site = {
 	author: 'Cooper Lappenbusch',
 	motto: 'less, but better.',
 	description:
-		'Refined is a journal by Cooper Lappenbusch about objects, attention, and cultivating a lifestyle that allows for deeper meaning.',
+		'Refined is a journal by Cooper Lappenbusch about attention, craft, and cultivating a lifestyle that allows for deeper meaning.',
 	/** Used for RSS + sitemap links. Vercel sets VERCEL_PROJECT_PRODUCTION_URL automatically. */
 	fallbackUrl: 'https://refined.vercel.app',
 	locale: 'en-US',
@@ -17,22 +17,10 @@ export const site = {
 
 export const sections = [
 	{
-		id: 'essays',
-		label: 'Essays',
-		singular: 'Essay',
-		blurb: 'Longer pieces on attention, craft, and the shape of a considered life.'
-	},
-	{
-		id: 'objects',
-		label: 'Objects',
-		singular: 'Object',
-		blurb: 'Things worth keeping — and why they earned their place.'
-	},
-	{
-		id: 'notes',
-		label: 'Notes',
-		singular: 'Note',
-		blurb: 'Short observations, collected as they arrive.'
+		id: 'posts',
+		label: 'Posts',
+		singular: 'Post',
+		blurb: 'Writing on attention, craft, objects, and the shape of a considered life.'
 	}
 ] as const;
 

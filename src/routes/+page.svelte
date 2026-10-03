@@ -33,7 +33,7 @@
 				</p>
 
 				<div class="animate-rise flex flex-wrap gap-3 md:col-span-5 md:justify-self-end [animation-delay:320ms]">
-					<Button href="/essays">Start reading</Button>
+					<Button href="/posts">Start reading</Button>
 					<Button href="/about" variant="ghost" arrow={false}>About</Button>
 				</div>
 			</div>
@@ -90,7 +90,7 @@
 		<div class="mx-auto max-w-wide py-28 md:py-36">
 			<div class="mb-12 flex items-end justify-between gap-6">
 				<h2 class="text-[clamp(36px,4.5vw,52px)] leading-none font-semibold tracking-[-0.05em]">Latest</h2>
-				<a href="/essays" class="label text-muted transition-colors hover:text-orange">All writing →</a>
+				<a href="/posts" class="label text-muted transition-colors hover:text-orange">All writing →</a>
 			</div>
 			<PostList posts={data.latest} />
 		</div>
@@ -101,7 +101,7 @@
      SECTIONS
      ======================================================= -->
 <section class="border-t border-line px-page">
-	<div class="mx-auto grid max-w-wide md:grid-cols-3">
+	<div class="mx-auto grid max-w-wide md:grid-cols-1">
 		{#each sections as s, i (s.id)}
 			<a
 				href="/{s.id}"

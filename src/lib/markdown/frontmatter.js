@@ -6,7 +6,7 @@
  *   title: The things we choose to keep
  *   description: A short essay about objects and attention.
  *   date: 2026-10-02
- *   section: essays
+ *   section: posts
  *   tags: [design, attention]
  *   ---
  *
@@ -26,7 +26,7 @@
 /** @typedef {string | number | boolean | null | string[]} FrontmatterValue */
 /** @typedef {Record<string, FrontmatterValue>} FrontmatterData */
 
-export const SECTIONS = /** @type {const} */ (['essays', 'objects', 'notes']);
+export const SECTIONS = /** @type {const} */ (['posts']);
 
 /**
  * Split a raw markdown file into its frontmatter data and body.
@@ -161,7 +161,7 @@ function scalar(raw) {
  * @property {string} description
  * @property {string} date           ISO date YYYY-MM-DD
  * @property {string | null} updated
- * @property {string} section        essays | objects | notes | page
+ * @property {string} section        posts | page
  * @property {string[]} tags
  * @property {number | null} number
  * @property {boolean} featured
@@ -217,7 +217,7 @@ export function normalizeMeta(data, opts = {}) {
 	let section = opts.isPage ? 'page' : String(data.section ?? opts.defaultSection ?? '').toLowerCase();
 	if (!opts.isPage && !(/** @type {readonly string[]} */ (SECTIONS)).includes(section)) {
 		errors.push(`"section" must be one of ${SECTIONS.join(', ')} — got "${section || '(empty)'}".`);
-		section = 'essays';
+		section = 'posts';
 	}
 
 	/** @type {string[]} */

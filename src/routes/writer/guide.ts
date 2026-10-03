@@ -186,10 +186,9 @@ export interface Field {
 export const fields: Field[] = [
 	{ name: 'title', required: true, does: 'The headline. Shown on the page, in lists, and in the browser tab.', example: 'title: The things we choose to keep' },
 	{ name: 'date', required: true, does: 'Publish date as YYYY-MM-DD. Posts are sorted newest first. Not needed for pages.', example: 'date: 2026-10-02' },
-	{ name: 'description', required: false, does: 'One or two sentences under the title, in lists, RSS and link previews. Defaults to the first paragraph.', example: 'description: A short essay about objects.' },
-	{ name: 'section', required: false, does: 'essays, objects or notes. Defaults to the folder the file is in.', example: 'section: essays' },
+	{ name: 'description', required: false, does: 'One or two sentences under the title, in lists, RSS and link previews. Defaults to the first paragraph.', example: 'description: A short post about objects.' },
 	{ name: 'tags', required: false, does: 'Topics for browsing at /tags. Write [a, b] or a "- item" list. Lowercased and slugified for you.', example: 'tags: [design, attention]' },
-	{ name: 'number', required: false, does: 'Pin the entry number. Otherwise entries are numbered automatically per section.', example: 'number: 5' },
+	{ name: 'number', required: false, does: 'Pin the entry number. Otherwise posts are numbered automatically, oldest first.', example: 'number: 5' },
 	{ name: 'updated', required: false, does: 'Date of the last revision, YYYY-MM-DD.', example: 'updated: 2026-10-10' },
 	{ name: 'featured', required: false, does: 'true puts it in the large featured slot on the home page.', example: 'featured: true' },
 	{ name: 'draft', required: false, does: 'true hides it on the live site while you work.', example: 'draft: true' },
@@ -200,9 +199,8 @@ export const fields: Field[] = [
 
 export const frontmatterExample = `---
 title: The things we choose to keep
-description: A short essay about objects and attention.
+description: A short post about objects and attention.
 date: 2026-10-02
-section: essays
 tags: [design, attention]
 ---
 
@@ -213,6 +211,6 @@ export const frontmatterNotes = [
 	'The header sits at the very top of the file, between two lines of three dashes.',
 	'Put a space after each colon. Lines starting with # inside the header are comments.',
 	'Files whose names start with _ are ignored, handy for templates and scratch drafts.',
-	'The filename becomes the URL: content/essays/on-slowness.md is /essays/on-slowness.',
+	'The filename becomes the URL: content/posts/on-slowness.md is /posts/on-slowness.',
 	'A mistake (bad date, missing title, duplicate URL) stops the build with a clear message, and the live site keeps the last good version.'
 ];

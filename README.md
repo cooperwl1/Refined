@@ -13,7 +13,7 @@ A minimal writing site built with **Svelte 5**, **SvelteKit**, **Tailwind CSS v4
  edit a .md file on github.com  ──►  commit to main  ──►  Vercel builds  ──►  site is live
 ```
 
-1. Open the repo on GitHub and go to `content/essays` (or `objects` / `notes`).
+1. Open the repo on GitHub and go to `content/posts`.
 2. Click **Add file → Create new file**, or open an existing post and click the ✏️ pencil.
 3. Write, then click **Commit changes**.
 4. Vercel sees the commit and runs `npm run build`. The build validates every file, parses the markdown and prerenders every page. The site updates in about a minute.
@@ -36,7 +36,7 @@ That's it. Every push to `main` deploys to production, and every other branch or
 
 ## Writing a post
 
-Create `content/<section>/<slug>.md`. The filename becomes the URL: `content/essays/on-slowness.md` → `/essays/on-slowness`.
+Create `content/posts/<slug>.md`. The filename becomes the URL: `content/posts/on-slowness.md` → `/posts/on-slowness`.
 
 ### The header (frontmatter)
 
@@ -45,9 +45,8 @@ Create `content/<section>/<slug>.md`. The filename becomes the URL: `content/ess
 title: The things we choose to keep          # required
 description: A short essay about objects…    # shown under the title, in lists, RSS
 date: 2026-10-02                              # required, YYYY-MM-DD
-section: essays                               # essays | objects | notes (defaults to folder)
 tags: [design, attention]                     # or a "- item" list
-number: 4                                     # optional; auto-numbered per section otherwise
+number: 4                                     # optional; auto-numbered otherwise
 updated: 2026-10-10                           # optional
 featured: true                                # optional; the landing page's featured post
 draft: true                                   # optional; hidden on the live site, visible in dev
@@ -79,7 +78,7 @@ A copyable template lives at [`content/_template.md`](content/_template.md). Fil
 | `:::aside` / `:::wide` | quiet aside / full-width breakout |
 | `<!-- comment -->` | hidden from the site |
 
-Smart quotes, en and em dashes (`--`, `---`) and ellipses (`...`) are applied automatically. The live example is the post **A field guide to writing here** (`content/notes/a-field-guide-to-writing-here.md`).
+Smart quotes, en and em dashes (`--`, `---`) and ellipses (`...`) are applied automatically. The live example is the post **/writer** page.
 
 ---
 
@@ -88,7 +87,7 @@ Smart quotes, en and em dashes (`--`, `---`) and ellipses (`...`) are applied au
 ```bash
 npm install
 npm run dev                         # http://localhost:5173 (drafts visible)
-npm run new -- essays "My title"    # scaffold a new draft post
+npm run new -- "My title"    # scaffold a new draft post
 npm run validate                    # check all frontmatter
 npm run check                       # type-check
 npm run build                       # production build (what Vercel runs)
@@ -98,7 +97,7 @@ npm run build                       # production build (what Vercel runs)
 
 ```
 content/                    ← the only folder you need to touch to publish
-  essays/ objects/ notes/   ← posts
+  posts/                    ← posts
   pages/about.md            ← standalone pages
 src/lib/markdown/
   frontmatter.js            ← header parser + schema (shared with the validator)

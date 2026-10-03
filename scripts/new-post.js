@@ -1,15 +1,10 @@
 #!/usr/bin/env node
-// Usage: npm run new -- essays "The title of my essay"
-import { existsSync, writeFileSync } from 'node:fs';
-import { SECTIONS, slugify } from '../src/lib/markdown/frontmatter.js';
+// Usage: npm run new -- "The title of my post"
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { slugify } from '../src/lib/markdown/frontmatter.js';
 
-const [section = 'essays', ...titleParts] = process.argv.slice(2);
-const title = titleParts.join(' ') || 'Untitled';
-
-if (!(/** @type {readonly string[]} */ (SECTIONS)).includes(section)) {
-	console.error(`Section must be one of: ${SECTIONS.join(', ')}`);
-	process.exit(1);
-}
+const section = 'posts';
+const title = process.argv.slice(2).join(' ') || 'Untitled';
 
 const date = new Date().toISOString().slice(0, 10);
 const file = `content/${section}/${slugify(title)}.md`;
@@ -18,6 +13,7 @@ if (existsSync(file)) {
 	process.exit(1);
 }
 
+mkdirSync(`content/${section}`, { recursive: true });
 writeFileSync(
 	file,
 	`---
