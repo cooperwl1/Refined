@@ -2,7 +2,7 @@
 	import Seo from '$lib/components/Seo.svelte';
 	import Markdown from '$lib/markdown/components/Markdown.svelte';
 	import { parse } from '$lib/markdown/parser';
-	import { groups, starter, tips } from './guide';
+	import { fields, frontmatterExample, frontmatterNotes, groups, starter, tips } from './guide';
 
 	let text = $state(starter);
 	const live = $derived(parse(text));
@@ -22,6 +22,7 @@
 		</p>
 		<nav class="label mt-10 flex flex-wrap gap-x-5 gap-y-2 text-muted" aria-label="Guide sections">
 			<a href="#try" class="hover:text-ink">Try it</a>
+			<a href="#header" class="hover:text-ink">The header</a>
 			{#each groups as g (g.id)}<a href="#{g.id}" class="hover:text-ink">{g.title}</a>{/each}
 			<a href="#tips" class="hover:text-ink">Tips</a>
 		</nav>
@@ -44,6 +45,44 @@
 			<div class="bg-paper">
 				<div class="label border-b border-line px-5 py-3 text-muted">Preview</div>
 				<div class="preview h-[480px] overflow-auto p-5"><Markdown doc={live} /></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="header" class="scroll-mt-8 border-t border-line px-page">
+	<div class="mx-auto max-w-wide py-16 md:py-24">
+		<h2 class="text-[clamp(30px,4vw,44px)] leading-none font-semibold tracking-[-0.05em]">The header</h2>
+		<p class="mt-4 max-w-[560px] text-[16px] leading-[1.6] text-muted">
+			Every post starts with a block of settings called frontmatter. It tells the site the title, date, section and tags. Only title and date are required.
+		</p>
+
+		<div class="mt-10 grid gap-10 md:grid-cols-12">
+			<div class="min-w-0 md:col-span-5">
+				<div class="label mb-2 text-muted">A complete header</div>
+				<pre class="overflow-x-auto bg-paper-2 p-4 font-mono text-[13px] leading-[1.7] whitespace-pre">{frontmatterExample}</pre>
+				<ul class="mt-6 space-y-3 text-[15px] leading-[1.55] text-muted">
+					{#each frontmatterNotes as n (n)}
+						<li class="flex gap-3"><span class="mt-[7px] size-1.5 flex-none bg-orange"></span>{n}</li>
+					{/each}
+				</ul>
+			</div>
+
+			<div class="md:col-span-7">
+				<div class="border-t border-ink">
+					{#each fields as f (f.name)}
+						<div class="grid gap-x-6 gap-y-1 border-b border-line py-4 sm:grid-cols-[130px_1fr]">
+							<div class="font-mono text-[14px] font-semibold">
+								{f.name}
+								<span class="label ml-1 {f.required ? 'text-orange' : 'text-muted'}">{f.required ? 'required' : 'optional'}</span>
+							</div>
+							<div class="min-w-0">
+								<p class="text-[15px] leading-[1.55] text-muted">{f.does}</p>
+								<code class="mt-2 inline-block bg-paper-2 px-2 py-1 font-mono text-[13px]">{f.example}</code>
+							</div>
+						</div>
+					{/each}
+				</div>
 			</div>
 		</div>
 	</div>

@@ -175,3 +175,42 @@ Callouts, notes and pullquotes all work here.
 - [x] Read the guide
 - [ ] Write something
 `;
+
+export interface Field {
+	name: string;
+	required: boolean;
+	does: string;
+	example: string;
+}
+
+export const fields: Field[] = [
+	{ name: 'title', required: true, does: 'The headline. Shown on the page, in lists, and in the browser tab.', example: 'title: The things we choose to keep' },
+	{ name: 'date', required: true, does: 'Publish date as YYYY-MM-DD. Posts are sorted newest first. Not needed for pages.', example: 'date: 2026-10-02' },
+	{ name: 'description', required: false, does: 'One or two sentences under the title, in lists, RSS and link previews. Defaults to the first paragraph.', example: 'description: A short post about objects.' },
+	{ name: 'tags', required: false, does: 'Topics for browsing at /tags. Write [a, b] or a "- item" list. Lowercased and slugified for you.', example: 'tags: [design, attention]' },
+	{ name: 'number', required: false, does: 'Pin the entry number. Otherwise posts are numbered automatically, oldest first.', example: 'number: 5' },
+	{ name: 'updated', required: false, does: 'Date of the last revision, YYYY-MM-DD.', example: 'updated: 2026-10-10' },
+	{ name: 'featured', required: false, does: 'true puts it in the large featured slot on the home page.', example: 'featured: true' },
+	{ name: 'draft', required: false, does: 'true hides it on the live site while you work.', example: 'draft: true' },
+	{ name: 'slug', required: false, does: 'Custom URL ending. Defaults to the filename (a leading date is dropped).', example: 'slug: custom-url' },
+	{ name: 'cover', required: false, does: 'Cover image path. Put images in static/images.', example: 'cover: /images/cover.jpg' },
+	{ name: 'coverAlt', required: false, does: 'Describes the cover image for screen readers.', example: 'coverAlt: A pen on a desk' }
+];
+
+export const frontmatterExample = `---
+title: The things we choose to keep
+description: A short post about objects and attention.
+date: 2026-10-02
+tags: [design, attention]
+---
+
+Start writing here. Everything below the second line of dashes is the body.
+`;
+
+export const frontmatterNotes = [
+	'The header sits at the very top of the file, between two lines of three dashes.',
+	'Put a space after each colon. Lines starting with # inside the header are comments.',
+	'Files whose names start with _ are ignored, handy for templates and scratch drafts.',
+	'The filename becomes the URL: content/posts/on-slowness.md is /posts/on-slowness.',
+	'A mistake (bad date, missing title, duplicate URL) stops the build with a clear message, and the live site keeps the last good version.'
+];

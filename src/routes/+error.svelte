@@ -15,5 +15,5 @@
 			? "Some things are removed on purpose. This page may have been one of them."
 			: page.error?.message}
 	</p>
-	<div class="mt-12"><Button href="/writer">Go to the writer</Button></div>
+	<div class="mt-12"><Button href="/">Back home</Button></div>
 </main>
