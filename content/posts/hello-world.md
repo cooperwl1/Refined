@@ -7,7 +7,7 @@ tags: [intro]
 
 Welcome to **Refined**. I'm Cooper, also known as Cooper Codes, "Coop da loop", DeskSpacing.com founder, CoderPrep failure, and Washington State Univeristy college dropout. I'm imperfect, so I thought I'd write here about my thoughts as I go about my life.
 
-To understand my imperfections, I thought I'd write the cliff notes of my life. Cliff notes are easier than long elaborate stories, so here goes:
+To understand my imperfections, I thought I'd write the cliff notes of my life. Here goes:
 
 - During the summer of 2020 I built the website DeskSpacing.com , amassing around 1,000,000 unique visitors. Revenue? Zero. I used it as an excuse to become an "entrepreneur" anyways.
 - In early 2021 I dropped out of Washington State Univeristy, where I had studied Computer Science. I had some disagreements with the collegiate system, particularly student debt, so I left. 
@@ -30,7 +30,7 @@ I live in a shitty room for rent, $900 per month utilities included. Every singl
 
 CoderPrep failed, but I think the core loop of answering questions and building an adaptive learning system remained. I'll talk more about the specifics of my projects in a different posts, but let me briefly mention Branch.
 
-Branch is my new project, I literally work on it during my commute on the bus, with meth addicts and homeless people making constant attempts to swipe my macbook, and software engineering nerds spying over my shoulder. The goal is an MMORPG where users have certain skills, ranks, quests, regions, and more to make learning fun and also effective. I've been working on a combat / questing system for learning. It sounds pretty crazy but it's getting close to an MVP, with my main first focus being on SAT preparation. I'm being vague here for the sake of conciseness, we can talk Branch later.
+Branch is my current software project. I work on it during my commute on the bus, with homeless people making constant attempts to swipe my macbook, and software engineering nerds spying curiously over my shoulder. The goal is an MMORPG where users have skills, ranks, quests, regions, and more to make learning fun and also effective. I've been working on a combat / questing system for learning. It sounds pretty crazy but it's getting close to an MVP, with my main first focus being on SAT preparation. I'm being vague here for the sake of conciseness, we can talk Branch later.
 
 ## Ok, We Know You Now... But Why Refined?
 
@@ -38,6 +38,10 @@ Throughout my journey I find myself studying different archetypes, different way
 
 Some of the posts will be analysis of my own projects, some of them will be technical, some will be about design, and some will be about philosophy. I even want to write posts of my inspirations, how web designers can learn from Tom Ford, how fashion designers can learn from Steve Jobs. Anything in the pursuit of refinement, that is this space.
 
-I hope that the ideas here are valuable to others, that maybe my little ramblings and expose some reality to the process of building great things. Or horrible things? Who knows, I just hope to build.
+I hope that the ideas here are valuable to others, that maybe my little ramblings can expose some reality to the process of building great things. Or horrible things?
+
+Who knows, I just hope to build. 
+
+Both a better life and better projects.
 
 Cooper
