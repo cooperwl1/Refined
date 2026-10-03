@@ -14,7 +14,7 @@ To understand my imperfections, I thought I'd write the cliff notes of my life. 
 - During 2021 I started the early working of my Cooper Codes YouTube channel, which I worked on for around 3 years. I gained 13,000 subscribers, collaborated with top YouTubers, and eventually burnt out after developing a philosophy that was increasingly against content creation in isolation. This period of collapse is where my intrigue with learning systems and learning algorithims began.
 - From 2021 to 2023 I worked a handful of software engineering internships, namely at Cigna, PagerDuty, and Microsoft.
 
-:::callout Tip
+:::callout Microsoft Almost Rejected Me
 My educational background check at Microsoft actually failed, and the recruiter ended up calling me directly. I lied to her and told her that I was actively a student at WSU, even though I hadn't gone to class in nearly two years. I made a forged transcript within 2 hours, and then called her back to convince her that I was still in school. I eventually convinced her that her background checking system was probably having some type of error. She "admitted her mistake", and let me into the internship program with almost no rebuttal. She even sent me an email apoligizing for her mistake and the stress it may have caused me. Yikes I can be a bastard!
 :::
 
