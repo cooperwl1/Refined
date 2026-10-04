@@ -65,7 +65,9 @@ The three golden rules: Lower, slower, and comfortable. If you mess up any of th
 
 A note on pitch: don't be a deadpan, tame, boring stick figurine. When doing an impression, feel free to go higher than normal, be expressive. Discussing a topic that you're particularly passionate about? Use enhanced tonality to express this, with a lightly sped up language. This is a careful art which I will touch on more in the future.
 
-Your standard lower pitch gives you a wider range of expression. If you're constantly speaking with a high pitch, going lower feels strange and creepily seductive. You're stuck in what I call "high pitch hell". Going from a default low pitch to a quickly expressive high pitch during a story has a more natural feeling. It is enticing, sexy, and unpredictable. This dynamic is game changing, and the "contrast" can turn you from a OK communicator to an expert one.
+Your standard lower pitch allows you to speak with a wider range of expression. If you're constantly speaking with a high pitch, going lower feels strange and creepily seductive. You're stuck in what I call "high pitch hell". Going from a default low pitch to a quickly expressive high pitch during a story has a more natural feeling. It is enticing, sexy, and unpredictable. This dynamic is game changing, and the "contrast" can turn you from a OK communicator to an expert one.
+
+One last note on tonality adjustments. Your 
 
 
 
