@@ -55,15 +55,17 @@ With these steps you can easily find your natural tone in minutes:
 
 1. Find a book to read, or blog post, preferably with complex language.
 2. Start reading in your regular voice.
-3. Adjust your speech so you talk at about a 75% speed compared to normal.
+3. Adjust your speech so you talk at about a 70-80% speed compared to normal.
 4. Attempt to keep reading at the same pace but with a lower tone.
-5. As soon as you find yourself running out of breath or feeling too constrained, raise your tone in pitch just a tad.
+5. As soon as you find yourself running out of breath or feeling too constrained, raise your tone in pitch just a tad. Reading with ease for at least 5 minutes? Lower it.
 6. Keep doing this. Your nautral low tone should be a lowered tone that you are comfortable speaking with for a long period of time, at least 30 minutes straight.
 7. You will find that your voice is not much deeper, for most people it's only about 5-10% deeper. The depth generally comes from the slower speed of speech and the awareness of effective speech.
 
 The three golden rules: Lower, slower, and comfortable. If you mess up any of those three rules, you're going to have a less than optimized voice.
 
-A note on pitch: don't be a deadpan idiot. Your baseline pitch should be the lower, slower, and comfortable. When doing an impression, feel free to go higher than normal, be expressive. Discussing a topic that you're particularly passionate about? Use enhanced tonality to express this, with a lightly sped up language. This is a careful art which I will touch on more in the future.
+A note on pitch: don't be a deadpan, tame, boring stick figurine. When doing an impression, feel free to go higher than normal, be expressive. Discussing a topic that you're particularly passionate about? Use enhanced tonality to express this, with a lightly sped up language. This is a careful art which I will touch on more in the future.
+
+Your standard lower pitch gives you a wider range of expression. If you're constantly speaking with a high pitch, going lower feels strange and creepily seductive. You're stuck in what I call "high pitch hell". Going from a default low pitch to a quickly expressive high pitch during a story has a more natural feeling. It is enticing, sexy, and unpredictable. This dynamic is game changing, and the "contrast" can turn you from a OK communicator to an expert one.
 
 
 
