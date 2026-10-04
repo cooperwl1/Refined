@@ -1,5 +1,5 @@
 ---
-title: Self Improvement "Culture" Is A Mask
+title: The Emptiness Of Self Improvement Culture
 description: My criticism of online self improvement circles, false prophets, the good parts, and the constant looking externally 
 date: 2026-10-04
 tags: [culture]
