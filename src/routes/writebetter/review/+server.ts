@@ -1,7 +1,7 @@
 import { json, error } from '@sveltejs/kit';
 import { env } from '$env/dynamic/private';
 import { reviewPrompts } from '$lib/server/review-prompts';
-import type { Annotation, ReviewTypeId } from '$lib/writebetter/reviews';
+import type { Annotation, AnnotationKind, ReviewTypeId } from '$lib/writebetter/reviews';
 
 export const prerender = false;
 
@@ -45,7 +45,12 @@ export async function POST({ request }) {
 	}
 	const annotations: Annotation[] = (Array.isArray(parsed) ? parsed : [])
 		.filter((a) => a && typeof a.quote === 'string' && typeof a.issue === 'string')
-		.map((a) => ({ quote: a.quote, issue: a.issue, suggestion: String(a.suggestion ?? '') }));
+		.map((a) => ({
+			kind: (['insight', 'adjustment', 'idea'].includes(a.kind) ? a.kind : 'adjustment') as AnnotationKind,
+			quote: a.quote,
+			issue: a.issue,
+			suggestion: String(a.suggestion ?? '')
+		}));
 
 	return json({ annotations });
 }
