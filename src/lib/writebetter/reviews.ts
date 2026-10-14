@@ -3,7 +3,9 @@ export const reviewTypes = [
 	{ id: 'clarity', label: 'Clarity', blurb: 'Vague claims, muddy sentences, buried points.' },
 	{ id: 'argument', label: 'Argument', blurb: 'Weak logic, unsupported claims, gaps in reasoning.' },
 	{ id: 'style', label: 'Style', blurb: 'Cliché, filler, passive voice, flabby rhythm.' },
-	{ id: 'skeptic', label: 'Hostile reader', blurb: 'The sharpest objections a doubtful reader would raise.' }
+	{ id: 'skeptic', label: 'Hostile reader', blurb: 'The sharpest objections a doubtful reader would raise.' },
+	{ id: 'ecl', label: 'Editorial Contrarian Luxury', blurb: 'Prose style: Tom Ford restraint, a contrarian spine, nothing cheap.' },
+	{ id: 'iecl', label: 'Instructional Editorial Contrarian Luxury', blurb: 'Prose style: Editorial Contrarian Luxury, but it teaches, in a direct on-camera voice.' }
 ] as const;
 
 export type ReviewTypeId = (typeof reviewTypes)[number]['id'];
