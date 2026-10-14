@@ -5,7 +5,7 @@ export const reviewTypes = [
 	{ id: 'style', label: 'Style', blurb: 'Cliché, filler, passive voice, flabby rhythm.' },
 	{ id: 'skeptic', label: 'Hostile reader', blurb: 'The sharpest objections a doubtful reader would raise.' },
 	{ id: 'ecl', label: 'Editorial Contrarian Luxury', blurb: 'Prose style: Tom Ford restraint, a contrarian spine, nothing cheap.' },
-	{ id: 'iecl', label: 'Instructional Editorial Contrarian Luxury', blurb: 'Prose style: Ecl, but it teaches, in a direct on-camera voice.' }
+	{ id: 'iecl', label: 'Instructional Editorial Contrarian Luxury', blurb: 'Prose style: Editorial Contrarian Luxury, but it teaches, in a direct on-camera voice.' }
 ] as const;
 
 export type ReviewTypeId = (typeof reviewTypes)[number]['id'];
