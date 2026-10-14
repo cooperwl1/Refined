@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Seo from '$lib/components/Seo.svelte';
-	import { reviewTypes, type Annotation, type ReviewTypeId } from '$lib/writebetter/reviews';
+	import { annotationKinds, reviewTypes, type Annotation, type AnnotationKind, type ReviewTypeId } from '$lib/writebetter/reviews';
 
 	type Located = Annotation & { id: number; found: boolean };
 
@@ -14,6 +14,9 @@
 	let active = $state<number | null>(null);
 	let words = $state(0);
 	let timer: ReturnType<typeof setTimeout>;
+	let paraBlock = $state<HTMLElement | null>(null);
+	let paraTop = $state(0);
+	const kindLabel = (k: AnnotationKind) => annotationKinds.find((x) => x.id === k)!.label;
 
 	const current = $derived(reviewTypes.find((r) => r.id === type)!);
 	const supportsHighlight = typeof CSS !== 'undefined' && 'highlights' in CSS;
@@ -25,7 +28,22 @@
 			editor.innerHTML = '<p><br></p>';
 		}
 		words = countWords();
+		document.addEventListener('selectionchange', trackParagraph);
+		return () => document.removeEventListener('selectionchange', trackParagraph);
 	});
+
+	function trackParagraph() {
+		const sel = document.getSelection();
+		let n: Node | null = sel?.anchorNode ?? null;
+		if (!n || !editor.contains(n) || n === editor) {
+			paraBlock = null;
+			return;
+		}
+		while (n && n.parentNode !== editor) n = n.parentNode;
+		const el = n instanceof HTMLElement && n.innerText.trim() ? n : null;
+		paraBlock = el;
+		if (el) paraTop = el.offsetTop;
+	}
 
 	const countWords = () => (editor.innerText.trim().match(/\S+/g) ?? []).length;
 
@@ -61,14 +79,14 @@
 
 	function paint() {
 		if (!supportsHighlight) return;
-		const ranges: Range[] = [];
+		const byKind: Record<AnnotationKind, Range[]> = { insight: [], adjustment: [], idea: [] };
 		let activeRange: Range | null = null;
 		items = items.map((it) => {
 			const r = rangeFor(it.quote);
-			if (r) (it.id === active ? (activeRange = r) : ranges.push(r));
+			if (r) (it.id === active ? (activeRange = r) : byKind[it.kind].push(r));
 			return { ...it, found: !!r };
 		});
-		CSS.highlights.set('wb-issue', new Highlight(...ranges));
+		for (const k of annotationKinds) CSS.highlights.set(`wb-${k.id}`, new Highlight(...byKind[k.id]));
 		CSS.highlights.set('wb-active', new Highlight(...(activeRange ? [activeRange] : [])));
 	}
 
@@ -96,12 +114,17 @@
 		onInput();
 	}
 
-	async function review() {
-		const text = editor.innerText;
+	async function review(scope?: HTMLElement | null) {
+		const text = scope ? scope.innerText : editor.innerText;
 		if (!text.trim() || loading) return;
 		loading = true;
 		errorMsg = '';
 		active = null;
+		if (scope) {
+			// Review just this paragraph: keep notes whose passages sit elsewhere.
+			const keep = items.filter((it) => !scope.innerText.includes(it.quote));
+			items = keep;
+		} else items = [];
 		try {
 			const res = await fetch('/writebetter/review', {
 				method: 'POST',
@@ -110,9 +133,10 @@
 			});
 			const data = await res.json().catch(() => ({}));
 			if (!res.ok) throw new Error(data.message ?? 'Review failed.');
-			items = (data.annotations as Annotation[]).map((a, id) => ({ ...a, id, found: true }));
+			const fresh = data.annotations as Annotation[];
+			items = [...items, ...fresh].map((a, id) => ({ ...a, id, found: true }));
 			paint();
-			if (!items.length) errorMsg = 'Nothing worth flagging. Either this is strong, or try another review type.';
+			if (!fresh.length) errorMsg = 'Nothing worth flagging. Either this is strong, or try another review type.';
 		} catch (e) {
 			errorMsg = e instanceof Error ? e.message : 'Review failed.';
 		} finally {
@@ -176,7 +200,7 @@
 			</div>
 
 			<button
-				onclick={review}
+				onclick={() => review()}
 				disabled={loading}
 				class="inline-flex h-12 items-center gap-3 bg-orange px-6 text-[12px] font-bold tracking-[0.08em] text-white uppercase transition-colors hover:bg-ink disabled:opacity-60"
 			>
@@ -186,6 +210,18 @@
 		</div>
 
 		<div class="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_340px]">
+			<div class="relative max-w-content">
+				{#if paraBlock}
+					<button
+						class="label absolute -top-1 right-0 z-10 translate-y-0 border border-line bg-paper px-3 py-2 hover:border-ink disabled:opacity-60"
+						style="top: {paraTop}px"
+						disabled={loading}
+						onmousedown={(e) => e.preventDefault()}
+						onclick={() => review(paraBlock)}
+					>
+						{loading ? 'Reviewing…' : 'Review paragraph'}
+					</button>
+				{/if}
 			<!-- svelte-ignore a11y_no_noninteractive_element_to_interactive_role -->
 			<div
 				bind:this={editor}
@@ -197,8 +233,9 @@
 				spellcheck="true"
 				oninput={onInput}
 				onpaste={onPaste}
-				class="wb-editor min-h-[60vh] max-w-content outline-none"
+				class="wb-editor min-h-[60vh] outline-none"
 			></div>
+			</div>
 
 			<aside aria-live="polite" class="lg:sticky lg:top-6 lg:max-h-[calc(100svh-3rem)] lg:self-start lg:overflow-auto">
 				{#if errorMsg}
@@ -216,7 +253,8 @@
 									class="block w-full p-4 text-left {active === it.id ? 'bg-paper-2' : ''} {it.found ? '' : 'opacity-50'}"
 									onclick={() => focusItem(it)}
 								>
-									<span class="block border-l-2 border-orange pl-3 text-[14px] italic">“{it.quote}”</span>
+									<span class="label block" style="color: var(--{it.kind === 'insight' ? 'blue' : it.kind === 'idea' ? 'yellow' : 'orange'})">{kindLabel(it.kind)}</span>
+									<span class="mt-2 block border-l-2 pl-3 text-[14px] italic" style="border-color: var(--{it.kind === 'insight' ? 'blue' : it.kind === 'idea' ? 'yellow' : 'orange'})">“{it.quote}”</span>
 									<span class="mt-3 block text-[14px] leading-[1.55]">{it.issue}</span>
 									{#if it.suggestion}
 										<span class="mt-2 block text-[13px] leading-[1.5] text-muted">→ {it.suggestion}</span>
@@ -276,11 +314,16 @@
 		padding-left: 1.4em;
 		list-style: disc;
 	}
-	:global(::highlight(wb-issue)) {
+	:global(::highlight(wb-insight)) {
+		background: color-mix(in srgb, var(--blue) 26%, transparent);
+	}
+	:global(::highlight(wb-adjustment)) {
 		background: color-mix(in srgb, var(--orange) 28%, transparent);
-		text-decoration: underline wavy var(--orange);
+	}
+	:global(::highlight(wb-idea)) {
+		background: color-mix(in srgb, var(--yellow) 38%, transparent);
 	}
 	:global(::highlight(wb-active)) {
-		background: color-mix(in srgb, var(--orange) 55%, transparent);
+		background: color-mix(in srgb, var(--ink) 22%, transparent);
 	}
 </style>

@@ -1,7 +1,8 @@
 import type { ReviewTypeId } from '$lib/writebetter/reviews';
 
 const format = `Respond with ONLY a JSON array, no prose, no code fences. Each element:
-{"quote": string, "issue": string, "suggestion": string}
+{"kind": "insight" | "adjustment" | "idea", "quote": string, "issue": string, "suggestion": string}
+- "kind": "insight" for an observation about how the style or voice is working (or failing) that needs no edit; "adjustment" for a concrete fix the writer should make; "idea" for an exploratory possibility worth trying but not required. Use all three where they genuinely apply.
 - "quote" must be copied EXACTLY, character for character, from the text, and must sit inside a single paragraph. Keep it short: a phrase or one sentence.
 - "issue" explains in one to three sentences why this passage is ineffective. Be specific and direct, not polite filler.
 - "suggestion" says concretely how to fix it.

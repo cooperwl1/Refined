@@ -14,6 +14,7 @@
 	--line: #c9c7bf;
 	--orange: #e4512a;
 	--yellow: #d6a928;
+	--blue: #2f6fe4;
 	--page-padding: clamp(24px, 5vw, 72px);
 	color-scheme: light;
 }
@@ -27,6 +28,7 @@
 		--line: #3a3936;
 		--orange: #f0643d;
 		--yellow: #e0b53a;
+		--blue: #5b92f2;
 		color-scheme: dark;
 	}
 }

@@ -10,7 +10,17 @@ export const reviewTypes = [
 
 export type ReviewTypeId = (typeof reviewTypes)[number]['id'];
 
+/** insight = a read on the style, adjustment = a fix to make, idea = an exploratory possibility. */
+export type AnnotationKind = 'insight' | 'adjustment' | 'idea';
+
+export const annotationKinds: { id: AnnotationKind; label: string }[] = [
+	{ id: 'insight', label: 'Insight' },
+	{ id: 'adjustment', label: 'Adjustment' },
+	{ id: 'idea', label: 'Explorative idea' }
+];
+
 export interface Annotation {
+	kind: AnnotationKind;
 	quote: string;
 	issue: string;
 	suggestion: string;
