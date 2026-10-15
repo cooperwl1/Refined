@@ -35,6 +35,18 @@ The Pythagorean Theorem daunts us with complexity, but past it's intimidating fa
 
 The 3x desires an aloneness which only multiplication can achieve.
 
+X stands on both sides of the equation, algebraically torn.
+
+X desires an isolation only division can fix. What shall we do?
+
+Wilted, that's how I felt up on first hearing of the Pythagorean Theorem.
+
+FOIL can be represented as a table, where each term is multiplied in an isolative square. The product of any two terms is then put in the square. Setup, multiplication, that's all we need to use FOIL effecively.
+
+Peruse the following example:
+
+FOIL is the expression of binomials, revealing their value. An improper expression would simply be dishonest to the binomial, FOIL shows them respect as an individual equation.
+
 ## Writing for Branch
 
 I'm on my path to start writing educational content for Branch, and I'm against the usage of AI for the content on the platform. The content alone should stand as strong, sexy, bold, courageous, and standoff-ish. Plain jane is for McGraw Hill. Branch takes risks.
